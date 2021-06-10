@@ -2,6 +2,8 @@ package com.example.dados
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -23,6 +25,18 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("Ciclo de vida", "On start")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("Ciclo de vida", "On resume")
+    }
+
+
 
     private fun getNumber(): Int {
         return (1..6).random()
