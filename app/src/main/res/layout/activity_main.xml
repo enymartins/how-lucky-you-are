@@ -11,15 +11,14 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/green_red_color_state"
         android:text="Jogar"
         android:textColor="@color/white"
-        android:backgroundTint="@color/green_red_color_state"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dado01"
-        app:layout_constraintVertical_bias="0.525" />
+        app:layout_constraintTop_toBottomOf="@+id/share" />
 
     <ImageView
         android:id="@+id/dado01"
@@ -33,17 +32,44 @@
         app:layout_constraintEnd_toStartOf="@+id/dado02"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/dice_1" />
 
     <ImageView
         android:id="@+id/dado02"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="146dp"
         android:layout_marginEnd="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/dado01"
+        android:layout_marginBottom="286dp"
+        app:layout_constraintBottom_toTopOf="@+id/share"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dado01"
-        app:layout_constraintTop_toTopOf="@+id/dado01"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dice_2" />
+
+    <TextView
+        android:id="@+id/welcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="45dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/dado02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dado02"
+        app:srcCompat="@android:drawable/ic_menu_share" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
